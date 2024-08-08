@@ -17,6 +17,7 @@ pipeline {
         
             steps {
                 sh '''
+                    echo 'Making change to trigger deploy'
                     ls -la
                     node --version
                     npm --version
