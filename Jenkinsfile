@@ -14,10 +14,8 @@ pipeline {
                     reuseNode true
                     args "--entrypoint=''"
                 }
-            }
-            environment {
-                 
-            }
+            } 
+            
             steps {
                 withCredentials([usernamePassword(credentialsId: 'my-aws-iam-yuyongxue-dev', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
                     sh '''
